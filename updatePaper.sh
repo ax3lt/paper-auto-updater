@@ -21,6 +21,8 @@ fi
 if [ $(eval 'sed '1!d' latestBuildInstalled') == $type ] && [ $(eval 'sed '2!d' latestBuildInstalled') == $version ] && [ $(eval 'sed '3!d' latestBuildInstalled') == $build ]; then
     echo "JAR up to date"
 else
+    # If you want to make the wget silend uncomment the next line and comment the default one
+    # wget $file -O $name 2>/dev/null
     wget $file -O $name
     echo $type > latestBuildInstalled
     echo $version >> latestBuildInstalled
