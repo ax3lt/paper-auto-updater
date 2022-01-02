@@ -1,4 +1,4 @@
-# name = "server.jar"
+# name="server.jar"
 # version="1.18.1" # Custom static version
 
 read -p "Output name: " name
